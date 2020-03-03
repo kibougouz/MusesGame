@@ -6,9 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Main/SubScenes/Title.unity
+    guid: 5648b5937e9978a468fcde59a23ba1fb
+  - enabled: 1
+    path: Assets/Main/SubScenes/Config.unity
+    guid: 03e23ac5dd3b7ff409f6585b75c2186d
+  - enabled: 1
+    path: Assets/Main/SubScenes/FlowChart.unity
+    guid: f7b3d60dd28ce204b9017a406ac49937
+  - enabled: 1
+    path: Assets/Main/MainScenes/Novel.unity
     guid: 7534d2d11d37d31409e3e27da3af32ba
   - enabled: 1
-    path: Assets/Scenes/Title.unity
-    guid: 5648b5937e9978a468fcde59a23ba1fb
+    path: Assets/Main/MainScenes/Survey.unity
+    guid: 8276f898627fdcd49a2fa7439f52c63a
+  - enabled: 1
+    path: Assets/Main/MainScenes/Organizing.unity
+    guid: 5d281b5bb9d1bde4d8764a2183969120
+  - enabled: 1
+    path: Assets/Main/MainScenes/Unravel.unity
+    guid: 814479f5a119dbc4aacdcc96f337ccba
   m_configObjects: {}
