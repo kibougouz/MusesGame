@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Canvas_ImageChange : MonoBehaviour
 {
-
+    GameObject cv;
     Image my_Image;
     //Set this in the Inspector
     public Sprite[] my_Sprite;
@@ -16,7 +16,8 @@ public class Canvas_ImageChange : MonoBehaviour
 
     void Start()
     {
-        my_Image = GetComponent<Image>();
+        cv = GameObject.Find("Canvas");
+        my_Image = cv.GetComponent<Image>();
         Sprite_No = 0;
     }
 
