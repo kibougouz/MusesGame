@@ -31,5 +31,11 @@ public class Canvas_ImageChange : MonoBehaviour
             Sprite_No += 1;//ここで順番に表示させる為に＋している。
             if (Sprite_No == MaxResetCnt) Sprite_No = 0;
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            my_Image.sprite = my_Sprite[Sprite_No];
+            Sprite_No += 1;//ここで順番に表示させる為に＋している。
+            if (Sprite_No == MaxResetCnt) Sprite_No = 0;
+        }
     }
 }

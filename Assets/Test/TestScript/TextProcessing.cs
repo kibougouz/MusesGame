@@ -97,13 +97,15 @@ public class TextProcessing : MonoBehaviour
         scenarios.Add(scenario);
     }
 
-    //
+    //最初に読み込みたいテキストを設定する為の関数
     void SetScenario(Scenario scenarios)
     {
         currentScenario = scenarios;
         scenarioMessage.text = currentScenario.Texts[0];
     }
 
+    /* 1.テキストの中の文を順番に表示させる処理
+     * 2.テキスト文を全部表示させたらExitScenario();を読み込む*/
     void SetNextMessage()
     {
         if(currentScenario.Texts.Count > index + 1)
@@ -117,6 +119,7 @@ public class TextProcessing : MonoBehaviour
         }
     }
 
+    //読み込んだテキストを全て表示させたら次のテキストを読み込む処理
     void ExitScenario()
     {
         scenarioMessage.text = "";
