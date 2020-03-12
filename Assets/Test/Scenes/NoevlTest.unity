@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: scenarioMessage
       value: 
       objectReference: {fileID: 1184454961}
+    - target: {fileID: 5420964512762251805, guid: 865469e58fa3ca34b9901166e69ef0d0,
+        type: 3}
+      propertyPath: novelSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5420964512762251874, guid: 865469e58fa3ca34b9901166e69ef0d0,
         type: 3}
       propertyPath: m_Name
