@@ -8,9 +8,9 @@ using System.Text;
 public class TextProcessing : MonoBehaviour
 {
     //ここから下をシリアライゼーションする
-    [SerializeField]
 #pragma warning disable 649
-    Text scenarioMessage;
+    [SerializeField] Text scenarioMessage;
+    [SerializeField] float novelSpeed;//一文字一文字の表示する速さ
 #pragma warning disable 649
 
     //C#のクラスの宣言
@@ -48,20 +48,26 @@ public class TextProcessing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        NextPush();
+    }
+
+    //====================================ここからC+の関数(メソッド)=======================================//
+
+    //押されたらテキストが動く処理
+    void NextPush()
+    {
         if (currentScenario != null)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                SetNextMessage();
+                StartCoroutine(SetNextMessage());
             }
             if (Input.GetButtonDown("" + keyname))
             {
-                SetNextMessage();
+                StartCoroutine(SetNextMessage());
             }
         }
     }
-
-    //====================================ここからC+の関数(メソッド)=======================================//
 
     //テキストデータを読み込んで使用する為の関数
     void ReadFileText(string fileName,int no)
@@ -106,11 +112,19 @@ public class TextProcessing : MonoBehaviour
 
     /* 1.テキストの中の文を順番に表示させる処理
      * 2.テキスト文を全部表示させたらExitScenario();を読み込む*/
-    void SetNextMessage()
+    IEnumerator SetNextMessage()
     {
-        if(currentScenario.Texts.Count > index + 1)
+        scenarioMessage.text = "";
+        int messageCount = 0; //現在表示中の文字数
+        if (currentScenario.Texts.Count > index + 1)
         {
             index++;
+            while (currentScenario.Texts[index].Length > messageCount)//文字をすべて表示していない場合ループ
+            {
+                scenarioMessage.text += currentScenario.Texts[index][messageCount];//一文字追加
+                messageCount++;//現在の文字数
+                yield return new WaitForSeconds(novelSpeed);//任意の時間待つ
+            }
             scenarioMessage.text = currentScenario.Texts[index];
         }
         else

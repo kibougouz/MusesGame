@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Canvas_ImageChange : MonoBehaviour
-{
+{   
     GameObject cv;
     Image my_Image;
     //Set this in the Inspector

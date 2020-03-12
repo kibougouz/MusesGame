@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TestSwich : MonoBehaviour
+﻿public static class COMMON
 {
-    // Start is called before the first frame update
-    void Start()
+    //switchで使う各章の名前
+    public enum Chapter
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        prologue,
+        chapter1,
+        chapter2,
+        chapter3,
+        chapter4,
+        chapter5,
     }
 }
