@@ -15,7 +15,7 @@ public class TextProcessing : MonoBehaviour
 
     //C#のクラスの宣言
     Scenario currentScenario;
-
+    COMMON NameCP;
     int index = 0;
     public string keyname = "";
 
@@ -49,6 +49,21 @@ public class TextProcessing : MonoBehaviour
     void Update()
     {
         NextPush();
+        //switch (NameCP.chapter)
+        //{
+        //    case Chapter.prologue:
+        //        break;
+        //    case Chapter.chapter1:
+        //        break;
+        //    case Chapter.chapter2:
+        //        break;
+        //    case Chapter.chapter3:
+        //        break;
+        //    case Chapter.chapter4:
+        //        break;
+        //    case Chapter.chapter5:
+        //        break;
+        //}
     }
 
     //====================================ここからC+の関数(メソッド)=======================================//
